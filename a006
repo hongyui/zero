@@ -1,0 +1,30 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+float a, b, c,d,an1,an2,x;
+int main()
+{
+	cin >> a >> b >> c;
+	d = pow(b, 2) - (4 * a * c);
+	if (d<0)
+	{
+		cout << "No real root";
+	}
+	else if (d == 0)
+	{
+		cout << "Two same roots x=" << (-b + (sqrt(d))) / (2 * a);
+	}
+	else if (d > 0)
+	{
+		an1 = (-b + (sqrt(d))) / (2 * a);
+		an2 = (-b - (sqrt(d))) / (2 * a);
+		if (an1 > an2)
+		{
+			cout << "Two different roots x1=" << an1 << " , x2=" << an2;
+		}
+		else if (an1 < an2)
+		{
+			cout << "Two different roots x1=" << an2 << " , x2=" << an1;
+		}
+	}
+}
